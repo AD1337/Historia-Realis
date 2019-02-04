@@ -1,0 +1,1640 @@
+{
+	"Organize Banquet":
+	{
+		"On":1,
+		"Time": 10,
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Administratio": 1,
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains Social":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Social",
+					"Value": 1,
+					"Chance": 20
+				},
+				"Creator gets Happy":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Happy",
+					"Value": 1
+				}
+			}
+		},
+		"RequiresCreator":
+		{
+			"Is Gregarious":
+			{
+				"What": "Trait.Social.Level",
+				"Comparison": ">",
+				"Value": "1"
+			},
+			"Not Ashamed":
+			{
+				"What": "Mood",
+				"Comparison": "not",
+				"Value": "Ashamed"
+			}
+		},
+		"Comments":
+		{
+			"Categories": ["Social"],
+			"Designers": ["Lucas Molina"],
+			"Writers": [""],
+			"Sprints": ["1"]
+		}
+	},
+	
+	"Befriend":
+	{
+		"On":1,
+		"Targets": 1,
+		"TargetSide": 2,
+		"AITargetChoice": "BestFriend",
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"$Target.Name becomes a Lover of $Creator.Name":
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Amici.$Target.Status",
+					"Value": "Friend"
+				},
+				"$Creator.Name becomes a Lover of $Target.Name":
+				{
+					"Who": "Target",
+					"Type": "Set",
+					"What": "Amici.$Creator.Status",
+					"Value": "Friend"
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Beautiful":
+			{
+				"What": "Traits.Beauty.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10,
+				"Who": "Creator"
+			}
+		},
+		"RequiresCreator":
+		{
+			"Is Social":
+			{
+				"What": "Trait.Social.Level",
+				"Comparison": ">",
+				"Value": "0"
+			}
+		},
+		"RequiresTarget":
+		{
+			"Relationship between creator and target is above 0":
+			{
+				"What": "$Creator.Amici.$Target.Relationship",
+				"Comparison": ">",
+				"Value": 0
+			},
+			"Relationship between creator and target is not friendship":
+			{
+				"What": "$Creator.Amici.$Target.Status",
+				"Comparison": "not",
+				"Value": "Friend"
+			}
+		},
+		"Comments":
+		{
+			"Categories": ["Social"],
+			"Designers": ["Lucas Molina"],
+			"Writers": [""],
+			"Sprints": ["1"]
+		}
+	},
+	
+	"Give Advice":
+	{
+		"On":1,
+		"Targets": 1,
+		"TargetSide": 2,
+		"AITargetChoice": "BestFriend",
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"$Target.Name gains 1 Energy":
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Energy",
+					"Value": 1
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Wise":
+			{
+				"What": "Traits.Wise.Level",
+				"Comparison": "<>",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Is Social":
+			{
+				"What": "Trait.Social.Level",
+				"Comparison": ">",
+				"Value": "0"
+			}
+		},
+		"RequiresTarget":
+		{
+			"Relationship between creator and target is above 0":
+			{
+				"What": "$Creator.Amici.$Target.Relationship",
+				"Comparison": ">",
+				"Value": 0
+			}
+		},
+		"Comments":
+		{
+			"Categories": ["Social"],
+			"Designers": ["Lucas Molina"],
+			"Writers": [""],
+			"Sprints": ["1"]
+		}
+	},
+	
+	
+	"Write Poem":
+	{
+		"On":1,
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains trait Poet":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Poet",
+					"Value": 1,
+					"Chance": 20
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Good Poet":
+			{
+				"What": "Traits.Poet.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Oratoria over 20":
+			{
+				"What": "Oratoria",
+				"Comparison": ">",
+				"Value": 20
+			},
+			"Likes poetry":
+			{
+				"What": "Trait.Likes Poetry.Level",
+				"Comparison": ">",
+				"Value": "0"
+			}
+		},
+		"Comments":
+		{
+			"Categories": ["Poetry"],
+			"Designers": ["Lucas Molina"],
+			"Writers": [""],
+			"Sprints": ["1"]
+		}
+	},
+	
+	"Write Epic Poem":
+	{
+		"On":1,
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains Dignitas":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 1,
+					"Chance": 20
+				}
+			},
+			"Failure":
+			{
+				"Creator loses interest in poetry":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Likes Poetry",
+					"Value": -1,
+					"Chance": 20
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Good Poet":
+			{
+				"What": "Traits.Poet.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Oratoria over 50":
+			{
+				"What": "Oratoria",
+				"Comparison": ">",
+				"Value": 50
+			},
+			"Likes poetry":
+			{
+				"What": "Trait.Likes Poetry.Level",
+				"Comparison": ">",
+				"Value": "0"
+			}
+		}
+	},
+	
+	"Write Love Poem":
+	{
+		"On":1,
+		"Targets":1,
+		"AITargetChoice":"Random",
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Pietas": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains trait Poet":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Poet",
+					"Value": 1,
+					"Chance": 20
+				},
+				"$Target.Name becomes a Lover of $Creator.Name":
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Amici.$Target.Status",
+					"Value": "Lover"
+				},
+				"$Creator.Name becomes a Lover of $Target.Name":
+				{
+					"Who": "Target",
+					"Type": "Set",
+					"What": "Amici.$Creator.Status",
+					"Value": "Lover"
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Good Poet":
+			{
+				"What": "Traits.Poet.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Oratoria over 30":
+			{
+				"What": "Oratoria",
+				"Comparison": ">",
+				"Value": 20
+			},
+			"Creator is at least Good Poet":
+			{
+				"What": "Trait.Poet.Level",
+				"Comparison": ">",
+				"Value": "0"
+			},
+			"Likes poetry":
+			{
+				"What": "Trait.Likes Poetry.Level",
+				"Comparison": ">",
+				"Value": "0"
+			}
+		}
+	},
+	
+	"Write Satirical Poem":
+	{
+		"On":1,
+		"Targets":1,
+		"AITargetChoice":"WorstEnemy",
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Astutia": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"+1 Poet (Trait)":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Poet",
+					"Value": 1,
+					"Chance": 20
+				},
+				"Target loses Reputation":
+				{
+					"Who": "Target",
+					"Type": "Trait",
+					"What": "Reputation",
+					"Value": -1,
+					"Chance": 100
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Good Poet":
+			{
+					"What": "Traits.Poet.Level",
+					"Comparison": ">",
+					"Value": 0,
+					"Stack": "true",
+					"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Oratoria over 30":
+			{
+				"What": "Oratoria",
+				"Comparison": ">",
+				"Value": 20
+			},
+			"Is Angry":
+			{
+				"What": "Mood",
+				"Comparison": "=",
+				"Value": "Angry"
+			},
+			"Is at least Good Poet":
+			{
+				"What": "Trait.Poet.Level",
+				"Comparison": ">",
+				"Value": "0"
+			},
+			"Likes poetry":
+			{
+				"What": "Trait.Likes Poetry.Level",
+				"Comparison": ">",
+				"Value": "0"
+			}
+		}
+	},
+	
+	"Write Sad Poem":
+	{
+		"On":1,
+		"Descriptions":
+		{
+			"Regular": "",
+			"Success": "",
+			"Failure": ""
+		},
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains trait Poet":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Poet",
+					"Value": 1,
+					"Chance": 20
+				},
+				"Creator gains Energy":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Energy",
+					"Value": 1,
+					"Chance": 30
+				}
+			},
+			"Failure":
+			{
+				"Character gets Depressed":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Depressed",
+					"Value": 1,
+					"Chance": 50
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Good Poet":
+			{
+					"What": "Traits.Poet.Level",
+					"Comparison": ">",
+					"Value": 0,
+					"Stack": "true",
+					"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Oratoria over 30":
+			{
+				"What": "Oratoria",
+				"Comparison": ">",
+				"Value": 20
+			},
+			"Creator is Sad":
+			{
+				"What": "Mood",
+				"Comparison": "=",
+				"Value": "Sad"
+			}
+		}
+	},
+	
+	
+	"Debate":
+	{
+		"On":1,
+		"Targets": 1,
+		"AITargetChoice": "WorstEnemy",
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is debating $Target.Name at the Forum.",
+			"Success": "$Creator.Name's has defeated $Target.Name in the debate.",
+			"Failure": "$Target.Name has defeated $Creator.Name in the debate."
+		},
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Target loses 1 Oratoria":
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Oratoria",
+					"Value": -1
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Good Orator":
+			{
+				"What": "Traits.Orator.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			},
+			"Bad Orator":
+			{
+				"What": "Traits.Orator.Level",
+				"Comparison": "<",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": -10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Oratoria over 10":
+			{
+				"What": "Oratoria",
+				"Comparison": ">",
+				"Value": 10
+			}
+		}
+	},
+	
+	"Attend the Baths":
+	{
+		"On":1,
+
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is socializing at the baths.",
+			"Success": "$Creator.Name feels energized!",
+			"Failure": "$Creator.Name felt excluded at the baths."
+		},
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains 1 Energy":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Energy",
+					"Value": 1
+				},
+				"Creator gains trait Social":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": "Social",
+					"Value": 1,
+					"Chance": 50
+				},
+			},
+			"Failure":
+			{
+				"Creator loses 1 Happiness":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Happy",
+					"Value": -1
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Beautiful Voice":
+			{
+				"What": "Traits.Voice.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		}
+	},
+	
+
+	"Practice Speech":
+	{
+		"On":1,
+
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is practicing their rhetoric at home.",
+			"Success": "$Creator.Name's speech practice has been very useful.",
+			"Failure": "$Creator.Name speech practice didn't help much."
+		},
+		
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains 1 Oratoria":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Oratoria",
+					"Value": 1
+				}
+			}
+		},
+		
+		"Modifiers":
+		{
+			"Is Good Orator":
+			{
+				"What": "Traits.Orator.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			},
+
+			"Is Disruptive":
+			{
+				"What": "Traits.Disruptive.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10,
+				"Side": 2
+			}
+		},
+		"RequiresCreator":
+		{
+			"Oratoria under 10":
+			{
+				"What": "Oratoria",
+				"Comparison": "<",
+				"Value": 10
+			}
+		}
+	},
+	
+	"Exercise":
+	{
+		"On":1,
+
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is training their body at the Field of Mars.",
+			"Success": "$Creator.Name's training has improved $Creator.HisHerU body.",
+			"Failure": "$Creator.Name's training didn't help much."
+		},
+		
+		"Stats":
+		{
+			"Martialis": 1
+		},
+		
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains 1 Martialis":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Creator loses 1 energy":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Energy",
+					"Value": -1
+				}
+			}
+		},
+		
+		"Modifiers":
+		{
+			"Is Strong":
+			{
+				"What": "Traits.Strong.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			},
+
+			"Is Weak":
+			{
+				"What": "Traits.Strong.Level",
+				"Comparison": "<",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Martialis under 10":
+			{
+				"What": "Martialis",
+				"Comparison": "<",
+				"Value": 10
+			}
+		}
+	},
+	
+	"Scheme":
+	{
+		"On":1,
+		"Targets": 1,
+		"AITargetChoice": "WorstEnemy",
+		
+
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is setting up a scheme.",
+			"Success": "$Creator.Name's scheme planning was a success.",
+			"Failure": "$Creator.Name's couldn't set up a scheme."
+		},
+		
+		"Stats":
+		{
+			"Astutia": 1
+		},
+		
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains 1 Astutia":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Target loses 1 Dignitas":
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -1
+				}
+			}
+		},
+		
+		"Modifiers":
+		{
+			"Is Astute":
+			{
+				"What": "Traits.Astute.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		"RequiresCreator":
+		{
+			"Astutia under 10":
+			{
+				"What": "Astutia",
+				"Comparison": "<",
+				"Value": 10
+			}
+		},
+		
+		"RequiresTarget":
+		{
+			"Relationship between creator and target is below 0":
+			{
+				"What": "$Creator.Amici.$Target.Relationship",
+				"Comparison": "<",
+				"Value": 0
+			}
+		}
+	},
+	
+	"Pray":
+	{
+		"On":1,
+
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is praying to the gods.",
+			"Success": "The gods have listened to $Creator.Name's prayer.",
+			"Failure": "The gods ignored $Creator.Name's prayer."
+		},
+		
+		"Stats":
+		{
+			"Pietas": 1
+		},
+		
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains 1 Pietas":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Pietas",
+					"Value": 1
+				}
+			}
+		},
+		
+		"Modifiers":
+		{
+			"Is Pious":
+			{
+				"What": "Traits.Pious.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		
+		"RequiresCreator":
+		{
+			"Pietas under 10":
+			{
+				"What": "Pietas",
+				"Comparison": "<",
+				"Value": 10
+			}
+		}
+	},
+	
+	"Manage Estate":
+	{
+		"On":1,
+
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is managing their wealth",
+			"Success": "$Creator.Name got better at counting coins.",
+			"Failure": "Turns out that $Creator.Name doesn't have much wealth - or couldn't find it."
+		},
+		
+		"Stats":
+		{
+			"Administratio": 1
+		},
+		
+		"Effects":
+		{
+			"Success":
+			{
+				"Creator gains 1 Administratio":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Administratio",
+					"Value": 1
+				}
+			}
+		},
+		
+		"Modifiers":
+		{
+			"Is Shrewd":
+			{
+				"What": "Traits.Shrewd.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10
+			}
+		},
+		
+		"RequiresCreator":
+		{
+			"Administratio under 10":
+			{
+				"What": "Administratio",
+				"Comparison": "<",
+				"Value": 10
+			}
+		}
+	},
+	
+	
+	"Slander":
+	{
+		"On":1,
+		"Targets": 1,
+		"AITargetChoice": "WorstEnemy",
+		
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is slandering $Target.Name.",
+			"Success": "$Creator.Name has managed to slander $Target.Name.",
+			"Failure": "$Creator.Name failed to slander $Target.Name."
+		},
+		
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Astutia": 1
+		},
+		
+		"Effects":
+		{
+			"Success":
+			{
+				"Target loses 10 Dignitas":
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -10
+				},
+				"Target becomes Smeared":
+				{
+					"Who": "Target",
+					"Value": -1,
+					"Type": "Change",
+					"What": "Trait.Reputation.Level"
+				}
+			}
+		},
+		
+		"Modifiers":
+		{
+			"Is Disruptive":
+			{
+				"What": "Traits.Disruptive.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10,
+				"Side": 1
+			}
+		},
+		
+		"RequiresCreator":
+		{
+			"Oratoria over 12":
+			{
+				"What": "Oratoria",
+				"Comparison": ">",
+				"Value": 12
+			}
+		},
+		
+		"RequiresTarget":
+		{
+			"Dignitas above 10":
+			{
+				"What": "$Target.Dignitas",
+				"Comparison": ">",
+				"Value": 10
+			},
+			"Relationship between creator and target is below 0":
+			{
+				"What": "$Creator.Amici.$Target.Relationship",
+				"Comparison": "<",
+				"Value": 0
+			}
+		}
+	},
+	
+
+	"Seduce Man":
+	{
+		"On":1,
+		"Targets": 1,
+		"TargetSide": 2,
+		"AITargetChoice": "Random",
+		"Descriptions":
+		{
+			"Regular": "$Creator.Name is seducing $Target.Name",
+			"Success": "$Creator.Name's has seduced $Target.Name",
+			"Failure": "$Creator.Name's couldn't seduce $Target.Name"
+		},
+		"Stats":
+		{
+			"Astutia": 1,
+			"Oratoria": 1,
+			"Attractiveness": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"$Target.Name becomes a Lover of $Creator.Name":
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Amici.$Target.Status",
+					"Value": "Lover"
+				},
+				"$Creator.Name becomes a Lover of $Target.Name":
+				{
+					"Who": "Target",
+					"Type": "Set",
+					"What": "Amici.$Creator.Status",
+					"Value": "Lover"
+				}
+			},
+			"Failure":
+			{
+				"$Target.Name loses relationship with $Creator.Name":
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Amici.$Target.Relationship",
+					"Value": -20
+				},
+				"$Creator.Name loses relationship with $Target.Name":
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Amici.$Creator.Relationship",
+					"Value": -20
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Is Beautiful":
+			{
+				"What": "Traits.Beauty.Level",
+				"Comparison": ">",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10,
+				"Who": "Creator"
+			},
+			"Is Ugly":
+			{
+				"What": "Traits.Beauty.Level",
+				"Comparison": "<",
+				"Value": 0,
+				"Stack": "true",
+				"Bonus": 10,
+				"Who": "Creator"
+			}
+		},
+		"RequiresCreator":
+		{
+			"Mood is confident":
+			{
+				"What": "Mood",
+				"Comparison": "=",
+				"Value": "Confident"
+			}
+		},
+		"RequiresTarget":
+		{
+			"Relationship between creator and target is above 0":
+			{
+				"What": "$Creator.Amici.$Target.Relationship",
+				"Comparison": ">",
+				"Value": 0
+			},
+			"Target is older than 15":
+			{
+				"What": "$Target.Age",
+				"Comparison": ">",
+				"Value": 15
+			},
+			"Target is male":
+			{
+				"What": "$Target.Gender",
+				"Comparison": "=",
+				"Value": "Male"
+			}
+		}
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	"Break from Patron":
+	{
+		"On":0,
+		"Description": "$char is trying to break from their patron.",
+		"MainStat": "Martialis",
+		"Target": "Patron",
+		"Stats":
+		{
+			"Martialis": 1
+		},
+		"Traits":
+		{
+			"Orator" : 50
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Set the creator's patron to 0":
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Patrons",
+					"Value": 0,
+					"Special": "LoseClient"
+				},
+				"Choose a trait if random chance occurs":
+				{
+					"Who": "Creator",
+					"Type": "Trait",
+					"What": ["Rebellious","Regretful"],
+					"Value": 1,
+					"Chance": 50
+				}
+			}
+		},
+		"Requires":
+		{
+			"Creator":
+			{
+				"Auctoritas": "HigherThanTarget",
+				"Patron": 1
+			}
+		}
+	},
+
+
+	"Replace Patron":
+	{
+		"On":0,
+		"Description": "$char is trying to replace their patron, $target.",
+		"Targets": 1,
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Auctoritas": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Client replaces Patron":
+				{
+					"Special": "ReplacePatron"
+				}
+			}
+		},
+		"PossibleTargets":
+		{
+			"Pool": "Amici",
+			
+			"RelationshipRequirements":
+			{
+				"Target must be creator's patron":
+				{
+					"Nature": "Patron"
+				},
+				"Creator must have bad relationship with patron":
+				{
+					"What": "Relationship",
+					"Comparison": "<",
+					"Value": -50
+				}
+			},
+			"CharacterRequirements":
+			{
+				"Patron's Dignitas must be lower than mine":
+				{
+					"What": "Dignitas",
+					"Comparison": "<",
+					"Value": "Mine"
+				}
+			}
+		}
+	},
+	
+	
+	"Make Client":
+	{
+		"On":0,
+		"Description": "$char is trying to make $target into their client.",
+		"MainStat": "Oratoria",
+		"Targets": 1,
+		"Stats":
+		{
+			"Oratoria": 1
+		},
+		"Effects":
+		{
+			"Success":
+			{
+				"Set the target's patron to event creator":
+				{
+					"Who": "Creator",
+					"What": "Target",
+					"Special": "AddClient"
+				}
+			}
+		},
+		"Requires":
+		{
+			"Target must have no patrons already":
+			{
+				"Who": "Target",
+				"What": "Patrons",
+				"Type": "EqualTo",
+				"Value": 0,
+				"Pool": "Independents",
+				"PreferenceType": "HighestBelowMine",
+				"PreferenceValue": "Auctoritas"
+			}
+		}
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	"Tribunus Plebis Elections":
+	{
+		"On":0,
+		"Description": "Elections for the office of Tribune of the Plebs.",
+		"Type": "Public",
+		"MainStat": "Martialis",
+		"Elections":
+		{
+			"Office": "Tribunus Plebis",
+			"Holders": 10,
+			"MinAge": 32
+		},
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Auctoritas": 1
+		},
+		"Effects":
+		{
+			"Always":
+			{
+				"Characters with highest contribution get the trait Elected Tribunus Plebis":
+				{
+					"Who": "Top",
+					"Count": 10,
+					"Type": "Change",
+					"What": "Trait.Elected.Level",
+					"Detail": "Tribunus Plebis",
+					"Value": 1
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Oratory traits":
+			{
+				"What": "Oratoria",
+				"Bonus": 10,
+				"Comparison": "TraitLadder"
+			},
+			"Already elected":
+			{
+				"What": "Elected",
+				"Bonus": -999,
+				"Type": "TraitSpecific",
+				"Category": "Elected"
+			},
+			"This office is beneath a Consul":
+			{
+				"What": "Consul",
+				"Bonus": -90,
+				"Type": "TraitSpecific",
+				"Category": "Consul"
+			}
+		}
+		
+	},
+	
+	"Quaestor Elections":
+	{
+		"On":0,
+		"Description": "Elections for the office of Quaestor.",
+		"Type": "Public",
+		"MainStat": "Pietas",
+		"Elections":
+		{
+			"Office": "Quaestor",
+			"Holders": 4,
+			"MinAge": 32
+		},
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Auctoritas": 1
+		},
+		"Effects":
+		{
+			"Always":
+			{
+				"Characters with highest contribution get the trait Elected Quaestor":
+				{
+					"Who": "Top",
+					"Count": 4,
+					"Type": "Change",
+					"Value": 1,
+					"What": "Trait.Elected.Level",
+					"Detail": "Quaestor"
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Too young (under 32)":
+			{
+				"What": "Age",
+				"Comparison": "<",
+				"Value": 32,
+				"Stack": "true",
+				"Add": "+",
+				"Bonus": -2
+			},
+			"Too old (over 60)":
+			{
+				"What": "Age",
+				"Comparison": ">",
+				"Value": 60,
+				"Stack": "Yes",
+				"Add": "%",
+				"Bonus": -5
+			},
+			"Oratory traits":
+			{
+				"What": "Oratoria",
+				"Bonus": 10,
+				"Comparison": "TraitLadder"
+			},
+			"Ambition traits":
+			{
+				"What": "Ambition",
+				"Bonus": 10,
+				"Comparison": "TraitLadder"
+			},
+			"Already elected":
+			{
+				"What": "Elected",
+				"Bonus": -999,
+				"Type": "TraitSpecific",
+				"Category": "Elected"
+		
+			},
+			"This office is beneath a Consul":
+			{
+				"What": "Consul",
+				"Bonus": -90,
+				"Type": "TraitSpecific",
+				"Category": "Consul"
+				
+			},
+			"Confident mood":
+			{
+				"What": "Mood",
+				"Value": "Confident",
+				"Bonus": 20,
+				"Comparison": "="
+			}
+		}
+	},
+
+	
+	"Aedile Elections":
+	{
+		"On":0,
+		"Description": "Elections for the office of Aedile.",
+		"Type": "Public",
+		"MainStat": "Martialis",
+		"Elections":
+		{
+			"Office": "Aedile",
+			"Holders": 4
+		},
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Auctoritas": 1
+		},
+		"Effects":
+		{
+			"Always":
+			{
+				"Characters with highest contribution get the trait Elected Aedile":
+				{
+					"Who": "Top",
+					"Count": 4,
+					"Type": "Change",
+					"What": "Trait.Elected.Level",
+					"Detail": "Aedile",
+					"Value": 1
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Already elected":
+			{
+				"What": "Elected",
+				"Bonus": -999,
+				"Type": "TraitSpecific",
+				"Category": "Elected"
+		
+			}
+		}
+	},
+	
+	"Praetor Elections":
+	{
+		"On":0,
+		"Description": "Elections for the office of Praetor.",
+		"Type": "Public",
+		"MainStat": "Martialis",
+		"Elections":
+		{
+			"Office": "Praetor",
+			"Holders": 1
+		},
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Auctoritas": 1
+		},
+		"Effects":
+		{
+			"Always":
+			{
+				"Characters with highest contribution get the trait Elected Praetor":
+				{
+					"Who": "Top",
+					"Count": 1,
+					"Type": "Change",
+					"What": "Trait.Elected.Level",
+					"Detail": "Praetor",
+					"Value": 1
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Already elected":
+			{
+				"What": "Elected",
+				"Bonus": -999,
+				"Type": "TraitSpecific",
+				"Category": "Elected"
+		
+			}
+		}
+	},
+	
+	"Consul Elections":
+	{
+		"On":0,
+		"Description": "Elections for the office of Consul.",
+		"Type": "Public",
+		"MainStat": "Martialis",
+		"Elections":
+		{
+			"Office": "Consul",
+			"Holders": 2
+		},
+		"Stats":
+		{
+			"Oratoria": 1,
+			"Auctoritas": 1
+		},
+		"Effects":
+		{
+			"Always":
+			{
+				"Characters with highest contribution get the trait Elected Consul":
+				{
+					"Who": "Top",
+					"Count": 2,
+					"Type": "Change",
+					"What": "Trait.Elected.Level",
+					"Detail": "Consul",
+					"Value": 1
+				}
+			}
+		},
+		"Modifiers":
+		{
+			"Already elected":
+			{
+				"What": "Elected",
+				"Bonus": -999,
+				"Type": "TraitSpecific",
+				"Category": "Elected"
+		
+			}
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+

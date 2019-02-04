@@ -1,0 +1,767 @@
+{
+	
+	"Personality":
+	{
+		"1":
+		{
+			"Name": "Strategist",
+			"Description": "$Char quietly plots world domination.",
+			"Effects":
+			{
+				"Astutia": 6,
+				"Administratio": 4,
+				"Pietas": -3
+			}
+		},
+		"2":
+		{
+			"Name": "Thinker",
+			"Description": "",
+			"Effects":
+			{
+				"Administratio": 6,
+				"Oratoria": 5,
+				"Martialis": -4
+			}
+		},
+		"3":
+		{
+			"Name": "Assertive",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis": 6,
+				"Oratoria": 3,
+				"Pietas": -2			
+			}
+		},
+		"4":
+		{
+			"Name": "Outspoken",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 12,
+				"Astutia": -2,
+				"Administratio": -4		
+			}
+		},
+		"5":
+		{
+			"Name": "Protector",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis": 4,
+				"Pietas": 4
+			}
+		},
+		"6":
+		{
+			"Name": "Idealist",
+			"Description": "",
+			"Effects":
+			{
+				"Pietas": 5,
+				"Martialis": 5,
+				"Administratio": -3
+			}
+		},
+		"7":
+		{
+			"Name": "Heroic",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis": 7,
+				"Pietas": 6,
+				"Astutia": -6
+			}
+		},
+		"8":
+		{
+			"Name": "Inspiring",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 7,
+				"Martialis": 4,
+				"Astutia": -4
+			}
+		},
+		"9":
+		{
+			"Name": "Dutiful",
+			"Description": "",
+			"Effects":
+			{
+				"Pietas": 3,
+				"Martialis": 3,
+				"Administratio": 1
+			}
+		},
+		"10":
+		{
+			"Name": "Defender",
+			"Description": "",
+			"Effects":
+			{
+				"Pietas": 6,
+				"Martialis": 4,
+				"Astutia": -3
+			}
+		},
+		"11":
+		{
+			"Name": "Upstanding",
+			"Description": "",
+			"Effects":
+			{
+				"Administratio": 8,
+				"Pietas": 4,
+				"Astutia": -5
+			}
+		},
+		"12":
+		{
+			"Name": "Provider",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 6,
+				"Pietas": 4,
+				"Astutia": -3
+			}
+		},
+		"13":
+		{
+			"Name": "Creator",
+			"Description": "",
+			"Effects":
+			{
+				"Astutia": 5,
+				"Administratio": 4,
+				"Martialis": -2
+			}
+		},
+		"14":
+		{
+			"Name": "Adventurer",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis": 6,
+				"Oratoria": 6,
+				"Administratio": -5
+			}
+		},
+		"15":
+		{
+			"Name": "Builder",
+			"Description": "",
+			"Effects":
+			{
+				"Administratio": 6,
+				"Astutia": 3,
+				"Martialis": -2
+			}
+		},
+		"16":
+		{
+			"Name": "Performer",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 17,
+				"Martialis": -5,
+				"Administratio": -5
+			}
+		}
+	},
+		
+
+
+		
+		
+		"Creator":
+		{
+		
+		},
+		
+		"Adventurer":
+		{
+		
+		},
+		
+		"Builder":
+		{
+		
+		},
+		
+		"Performer":
+		{
+		
+		},
+		
+	
+	
+	
+	
+	
+
+	"Orator":
+	{
+		"3":
+		{
+			"Name": "Exquisite Orator",
+			"Description": "A thunderous voice calls: 'Romans! Citizens!'",
+			"Effects":
+			{
+				"Oratoria": 10
+			}
+		},
+		"2":
+		{
+			"Name": "Great Orator",
+			"Description": "Few Romans have such rhetorical ability.",
+			"Effects":
+			{
+				"Oratoria": 5
+			}
+		},
+		"1":
+		{
+			"Name": "Good Orator",
+			"Description": "This person is a good orator.",
+			"Effects":
+			{
+				"Oratoria": 2
+			}
+		},
+		"-1":
+		{
+			"Name": "Poor Orator",
+			"Description": "This person is a poor orator.",
+			"Effects":
+			{
+				"Oratoria": -2
+			}
+		},
+		"-2":
+		{
+			"Name": "Terrible Orator",
+			"Description": "Mumble mumble.",
+			"Effects":
+			{
+				"Oratoria": -5
+			}
+		},
+		"-3":
+		{
+			"Name": "Speechless",
+			"Description": "This person is so bad at public speaking that they'd rather not.",
+			"Effects":
+			{
+				"Oratoria": -10
+			}
+		}
+	},
+	
+	"Voice":
+	{
+		"2":
+		{
+			"Name": "Commanding Voice",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 5,
+				"Attractiveness": 5
+			}
+		},
+		"1":
+		{
+			"Name": "Beautiful Voice",
+			"Description": "When $Char.Name speaks, it's like spring begins.",
+			"Effects":
+			{
+				"Oratoria": 3,
+				"Attractiveness": 10
+			}
+		},
+		"-1":
+		{
+			"Name": "Squeaky Voice",
+			"Description": "Nobody likes to listen to $Char.Name's voice, even if $Char.HeSheU has something important to say.",
+			"Effects":
+			{
+				"Oratoria": -4,
+				"Attractiveness": -10
+			}
+		},
+		"-2":
+		{
+			"Name": "Stutter",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": -10,
+				"Attractiveness": -5
+			}
+		}
+	},
+	
+	"Poet":
+	{
+		"2":
+		{
+			"Name": "Great Poet",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 7,
+				"Attractiveness": 3
+			}
+		},
+		"1":
+		{
+			"Name": "Good Poet",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 2,
+				"Attractiveness": 2
+			}
+		},
+		"-1":
+		{
+			"Name": "Bad Poet",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": -3,
+				"Attractiveness": -3
+			}
+		},
+		"-2":
+		{
+			"Name": "Terrible Poet",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": -5,
+				"Attractiveness": -5
+			}
+		}
+	},
+	
+	"Likes Poetry":
+	{
+		"1":
+		{
+			"Name": "Likes Poetry",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 1
+			}
+		},
+		"-1":
+		{
+			"Name": "Dislikes Poetry",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": -1
+			}
+		}
+	},
+	
+	"Social":
+	{
+		"3":
+		{
+			"Name": "Life of the Party",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 5
+			}
+		},
+		"2":
+		{
+			"Name": "Gregarious",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 3
+			}
+		},
+		"1":
+		{
+			"Name": "Social",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": 2
+			}
+		},
+		"-1":
+		{
+			"Name": "Shy",
+			"Description": "",
+			"Effects":
+			{
+				"Oratoria": -1
+			}
+		},
+		"-2":
+		{
+			"Name": "Recluse",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis": -2,
+				"Oratoria": -2,
+				"Astutia": -2,
+				"Administratio": -2,
+				"Pietas": -2
+			}
+		},
+		"Comments":
+		{
+			"Categories": ["Poetry"],
+			"Designers": ["Lucas Molina"],
+			"Writers": [""],
+			"Sprints": ["1"]
+		}
+	},
+	
+	"Depressed":
+	{
+		"1":
+		{
+			"Name": "Depressed",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis": -10,
+				"Oratoria": -10,
+				"Astutia": -10,
+				"Administratio": -10,
+				"Pietas": -10
+			}
+		},
+		"-1":
+		{
+			"Name": "Lively",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis": 2,
+				"Oratoria": 2,
+				"Astutia": 2,
+				"Administratio": 2,
+				"Pietas": 2
+			}
+		}
+	},
+	
+	"Reputation":
+	{
+		"1":
+		{
+			"Name": "Exalted",
+			"Description": "Everyone holds this person in high regard.",
+			"Effects":
+			{
+				"Oratoria": 2,
+				"Attractiveness": 3
+			}
+		},
+		"-1":
+		{
+			"Name": "Smeared",
+			"Description": "Someone has hurt this person's reputation.",
+			"Effects":
+			{
+				"Oratoria": -3,
+				"Attractiveness": -2
+			}
+		}
+	},
+	
+	"Beauty":
+	{
+		"2":
+		{
+			"Name": "Stunningly Beautiful",
+			"Description": "$Char.Name looks just like a Greek sculpture.",
+			"Effects":
+			{
+				"Attractiveness": 10
+			}
+		},
+		"1":
+		{
+			"Name": "Attractive",
+			"Description": "Some people are born with looks.",
+			"Effects":
+			{
+				"Attractiveness": 5
+			}
+		},
+		"-1":
+		{
+			"Name": "Unattractive",
+			"Description": "There's something off about $Char.Name's appearance.",
+			"Effects":
+			{
+				"Attractiveness": -5
+			}
+		},
+		"-2":
+		{
+			"Name": "Ugly",
+			"Description": "I'd rather look at an incoming barbarian invasion.",
+			"Effects":
+			{
+				"Attractiveness": -10
+			}
+		}
+	},
+	
+	
+	
+	"Martialis Talent":
+	{
+		"3":
+		{
+			"Name": "Military Prodigy",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis Talent": 30,
+				"Martialis": 3
+			}
+		},
+		"2":
+		{
+			"Name": "Thirst for Blood",
+			"Description": "",
+			"Effects":
+			{
+				"Attractiveness": 20,
+				"Martialis": 2
+			}
+		},
+		"1":
+		{
+			"Name": "Taste for Battle",
+			"Description": "",
+			"Effects":
+			{
+				"Attractiveness": 10,
+				"Martialis": 1
+			}
+		},
+		"-1":
+		{
+			"Name": "Dislikes Fighting",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis Talent": -10,
+				"Martialis": -1
+			}
+		},
+		"-2":
+		{
+			"Name": "Pacifist",
+			"Description": "",
+			"Effects":
+			{
+				"Martialis Talent": -20,
+				"Martialis": -2
+			}
+		}
+	},
+	
+	"Martialis Aptitude":
+	{
+		"1":
+		{
+			"Name": "Taste for Battle",
+			"Description":"",
+			"Effects":
+			{
+			
+			}
+		},
+		"2":
+		{
+			"Name": "Thirst for Blood",
+			"Description": "",
+			"Effects":
+			{
+			
+			}
+		},
+		"3":
+		{
+			"Name": "Military Prodigy",
+			"Description": "",
+			"Effects":
+			{
+			
+			}
+		}
+	},
+	
+ 
+	"Poor Orator":
+	{
+		"Category": "Orator",
+		"Level": -1,
+		"Description": "",
+		"Effects":
+		{
+			"Stat":
+			{
+				"Oratoria": -1
+			},
+			"Rate":
+			{
+			"Oratoria": -10
+			}
+		}
+	},
+ 
+	"Atheist":
+	{
+		"Category": "Religious",
+		"Level": -2,
+		"Description": "Gods are nothing to me.",
+		"Effects":
+		{
+			"Pietas": -5,
+			"GainPietas": -30
+		}
+	},
+	
+	"Athletic":
+	{
+		"Category": "Strong",
+		"Level": 1,
+		"Description": "",
+		"Effects":
+		{
+			"Martialis": 2,
+			"GainMartialis": 10
+		}
+	},
+	
+	"Treacherous":
+	{
+		"Category": "Loyal",
+		"Level": -2,
+		"Description": "",
+		"Effects":
+		{
+			"Loyalty": -2
+		}
+	},
+	
+	"Spiteful":
+	{
+		"Category": "Forgiving",
+		"Level": -2,
+		"Description": "",
+		"Effects":
+		{
+			"Forgiving": -2
+		}
+	},
+	
+	"Forgiving":
+	{
+		"Category": "Forgiving",
+		"Level": 1,
+		"Description": "",
+		"Effects":
+		{
+			"Forgiving": 1
+		}
+	},
+	
+	
+	"Epicurean":
+	{
+		"Category": "MoralPhilosophy",
+		"Level": -1,
+		"Description": "",
+		"Effects":
+		{
+			"Loyalty": -1
+		}
+	},
+	
+	"Stoic":
+	{
+		"Category": "MoralPhilosophy",
+		"Level": 1,
+		"Description": "",
+		"Effects":
+		{
+			"Loyalty": 2
+		}
+	},
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	"Anxiety Disorder":
+	{
+	
+	},
+	
+	"Depression":
+	{
+	
+	},
+	
+	"Anger Issues":
+	{
+	
+	},
+	
+	"Inspiring":
+	{
+		"Description": "Increases how much Auctoritas you gain from your clients by $percent."
+	},
+	
+	"Italian":
+	{
+	
+	},
+	
+	
+ 	"Last": 0
+}
