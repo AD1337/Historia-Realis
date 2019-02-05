@@ -1,170 +1,200 @@
 {
-  "Poet": {
-    "2": {
-      "Name": "Great Poet",
-      "Oratoria": 3,
-      "Attractiveness": 2
-    },
-    "1": {
-      "Name": "Good Poet",
-      "Oratoria": 2,
-      "Attractiveness": 1
-    },
-    "-1": {
-      "Name": "Bad Poet",
-      "Oratoria": -2,
-      "Attractiveness": -1
-    },
-    "-2": {
-      "Name": "Terrible Poet",
-      "Oratoria": -3,
-      "Attractiveness": -2
-    }
-  },
-  "Rider": {
-    "2": {
-      "Name": "Proper Gallop",
-      "Description": "Your form on horseback rivals the legends of old!",
-      "Martialis": 2,
-      "Dignitas": 1,
-      "Health": 2,
-      "Attractiveness": 1
-    },
-    "1": {
-      "Name": "Sure Gallop",
-      "Description": "You are a confident equine handler.",
-      "Martialis": 1,
-      "Dignitas": 0,
-      "Health": 1,
-      "Attractiveness": 0
-    },
-    "-1": {
-      "Name": "Wobbly Gallop",
-      "Description": "Stability on horseback is an art you still seek to develop.",
-      "Martialis": -1,
-      "Dignitas": 0,
-      "Health": -1,
-      "Attractiveness": 0
-    },
-    "-2": {
-      "Name": "Unstable Gallop",
-      "Description": "It is a wonder the gods haven't struck you off your horse yet.",
-      "Martialis": -2,
-      "Dignitas": -1,
-      "Health": -2,
-      "Attractiveness": -1
-    }
-  },
-  "Fighter": {
-    "3": {
-      "Name": "Veteran Fighter",
-      "Description": "No man who faces you can dream of emerging victorious!",
-      "Martialis": 3,
-      "Dignitas": 2,
-      "Health": 2,
-      "Attractiveness": 3
-    },
-    "2": {
-      "Name": "Stalwart Fighter",
-      "Description": "Hopeful fighters see you as a strong opponent.",
-      "Martialis": 2,
-      "Dignitas": 1,
-      "Health": 1,
-      "Attractiveness": 2
-    },
-    "1": {
-      "Name": "Rookie Fighter",
-      "Description": "You stand your ground and fight, a tried and true fighter.",
-      "Martialis": 1,
-      "Dignitas": 0,
-      "Health": 0,
-      "Attractiveness": 1
-    },
-    "-1": {
-      "Name": "Basic Fighter",
-      "Description": "You can fight with most opponents, but are nothing special.",
-      "Martialis": -1,
-      "Dignitas": -1,
-      "Health": -1,
-      "Attractiveness": -1
-    },
-    "-2": {
-      "Name": "Clumsy Fighter",
-      "Description": "Your strikes sometimes land, and other times miss completely.",
-      "Martialis": -2,
-      "Dignitas": -2,
-      "Health": -2,
-      "Attractiveness": -2
-    },
-    "-3": {
-      "Name": "Weak Fighter",
-      "Description": "A river fish would have an easier time fighting an opponent than you.",
-      "Martialis": -3,
-      "Dignitas": -3,
-      "Health": -3,
-      "Attractiveness": -3
-    }
-  },
-  "Commander": {
-    "2": {
-      "Name": "Imposing Commander",
-      "Description": "Your word on the battlefield carries great pride and morale!",
-      "Martialis": 3,
-      "Dignitas": 2,
-      "Attractiveness": 2
-    },
-    "1": {
-      "Name": "Confident Commander",
-      "Description": "Those you lead have faith in your firm words.",
-      "Martialis": 2,
-      "Dignitas": 1,
-      "Attractiveness": 1
-    },
-    "-1": {
-      "Name": "Unconfident Commander",
-      "Description": "Eyebrows raise at the majority of your requests.",
-      "Martialis": -2,
-      "Dignitas": -1,
-      "Attractiveness": -1
-    },
-    "-2": {
-      "Name": "Incompetent Commander",
-      "Description": "You would be lucky if any turned to you when you spoke.",
-      "Martialis": -3,
-      "Dignitas": -2,
-      "Attractiveness": -2
-    }
-  },
-  "Has Tutor": {
-    "1": {
-      "Name": "Has Tutor",
-      "Description": "Your friend has agreed to tutor you however you can only progress if you put the effort in.",
-      "Oratoria": 2
-    }
-  },
-  "Writer": {
-    "1": {
-      "Name": "Writer",
-      "Description": "You are skiled, even flamboyant, with a pen. Your words can be kind, or cruel.",
-      "Oratoria": 4,
-      "Dignitas": 2
-    }
-  },
-  "Orator": {
-    "1": {
-      "Name": "Orator",
-      "Description": "When you speak others listen, you are charming, eloquent and commanding.",
-      "Oratoria": 5,
-      "Dignitas": 3,
-      "Attractiveness": 4
-    }
-  },
-  "Master Of Dialectic": {
-    "1": {
-      "Name": "Master Of Dialectic",
-      "Description": "Your logical reasoning is razor sharp, you cut through weak arguments with ease.",
-      "Oratoria": 4,
-      "Dignitas": 2
-    }
-  }
+	"Poet": 
+	{
+		"2": 
+		{
+			"Name": "Great Poet",
+			"Oratoria": 3,
+			"Attractiveness": 2
+		},
+		"1": 
+		{
+			"Name": "Good Poet",
+			"Oratoria": 2,
+			"Attractiveness": 1
+		},
+		"-1": 
+		{
+			"Name": "Bad Poet",
+			"Oratoria": -2,
+			"Attractiveness": -1
+		},
+		"-2": 
+		{
+			"Name": "Terrible Poet",
+			"Oratoria": -3,
+			"Attractiveness": -2
+		}
+	},
+	"Rider": 
+	{
+		"2": 
+		{
+			"Name": "Proper Gallop",
+			"Description": "Your form on horseback rivals the legends of old!",
+			"Martialis": 2,
+			"Dignitas": 1,
+			"Health": 2,
+			"Attractiveness": 1
+		},
+		"1": 
+		{
+			"Name": "Sure Gallop",
+			"Description": "You are a confident equine handler.",
+			"Martialis": 1,
+			"Dignitas": 0,
+			"Health": 1,
+			"Attractiveness": 0
+		},
+		"-1": 
+		{
+			"Name": "Wobbly Gallop",
+			"Description": "Stability on horseback is an art you still seek to develop.",
+			"Martialis": -1,
+			"Dignitas": 0,
+			"Health": -1,
+			"Attractiveness": 0
+		},
+		"-2": 
+		{
+			"Name": "Unstable Gallop",
+			"Description": "It is a wonder the gods haven't struck you off your horse yet.",
+			"Martialis": -2,
+			"Dignitas": -1,
+			"Health": -2,
+			"Attractiveness": -1
+		}
+	},
+	"Fighter": 
+	{
+		"3": 
+		{
+			"Name": "Veteran Fighter",
+			"Description": "No man who faces you can dream of emerging victorious!",
+			"Martialis": 3,
+			"Dignitas": 2,
+			"Health": 2,
+			"Attractiveness": 3
+		},
+		"2": 
+		{
+			"Name": "Stalwart Fighter",
+			"Description": "Hopeful fighters see you as a strong opponent.",
+			"Martialis": 2,
+			"Dignitas": 1,
+			"Health": 1,
+			"Attractiveness": 2
+		},
+		"1": 
+		{
+			"Name": "Rookie Fighter",
+			"Description": "You stand your ground and fight, a tried and true fighter.",
+			"Martialis": 1,
+			"Dignitas": 0,
+			"Health": 0,
+			"Attractiveness": 1
+		},
+		"-1": 
+		{
+			"Name": "Basic Fighter",
+			"Description": "You can fight with most opponents, but are nothing special.",
+			"Martialis": -1,
+			"Dignitas": -1,
+			"Health": -1,
+			"Attractiveness": -1
+		},
+		"-2": 
+		{
+			"Name": "Clumsy Fighter",
+			"Description": "Your strikes sometimes land, and other times miss completely.",
+			"Martialis": -2,
+			"Dignitas": -2,
+			"Health": -2,
+			"Attractiveness": -2
+		},
+		"-3": 
+		{
+			"Name": "Weak Fighter",
+			"Description": "A river fish would have an easier time fighting an opponent than you.",
+			"Martialis": -3,
+			"Dignitas": -3,
+			"Health": -3,
+			"Attractiveness": -3
+		}
+	},
+	"Commander": 
+	{
+		"2": 
+		{
+			"Name": "Imposing Commander",
+			"Description": "Your word on the battlefield carries great pride and morale!",
+			"Martialis": 3,
+			"Dignitas": 2,
+			"Attractiveness": 2
+		},
+		"1": 
+		{
+			"Name": "Confident Commander",
+			"Description": "Those you lead have faith in your firm words.",
+			"Martialis": 2,
+			"Dignitas": 1,
+			"Attractiveness": 1
+		},
+		"-1": 
+		{
+			"Name": "Unconfident Commander",
+			"Description": "Eyebrows raise at the majority of your requests.",
+			"Martialis": -2,
+			"Dignitas": -1,
+			"Attractiveness": -1
+		},
+		"-2": 
+		{
+			"Name": "Incompetent Commander",
+			"Description": "You would be lucky if any turned to you when you spoke.",
+			"Martialis": -3,
+			"Dignitas": -2,
+			"Attractiveness": -2
+		}
+	},
+	"Has Tutor": 
+	{
+		"1": 
+		{
+			"Name": "Has Tutor",
+			"Description": "Your friend has agreed to tutor you however you can only progress if you put the effort in.",
+			"Oratoria": 2
+		}
+	},
+	"Writer": 
+	{
+		"1": 
+		{
+			"Name": "Writer",
+			"Description": "You are skiled, even flamboyant, with a pen. Your words can be kind, or cruel.",
+			"Oratoria": 4,
+			"Dignitas": 2
+		}
+	},
+	"Orator": 
+	{
+		"1": 
+		{
+			"Name": "Orator",
+			"Description": "When you speak others listen, you are charming, eloquent and commanding.",
+			"Oratoria": 5,
+			"Dignitas": 3,
+			"Attractiveness": 4
+		}
+	},
+	"Master Of Dialectic": 
+	{
+		"1": 
+		{
+			"Name": "Master Of Dialectic",
+			"Description": "Your logical reasoning is razor sharp, you cut through weak arguments with ease.",
+			"Oratoria": 4,
+			"Dignitas": 2
+		}
+	}
 }
