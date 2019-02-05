@@ -58,7 +58,7 @@
 	{
 		"Description": {
 			"Who": "Creator",
-			"Type": "Change",
+			"Type": "Set",
 			"What": "Trait.Has Tutor.Level",
 			"Value": 1
 		},
@@ -98,7 +98,7 @@
         "Success": {
 		"Description": {
 			"Who": "Creator",
-			"Type": "Change",
+			"Type": "Set",
 			"What": "Trait.Writer.Level",
 			"Value": 1
 			}
@@ -140,7 +140,7 @@
       {
         "Success": { "Description": {
         "Who": "Creator",
-        "Type": "Change",
+        "Type": "Set",
         "What": "Trait.Orator.Level",
         "Value": 1
 	}
@@ -183,7 +183,7 @@
       {
         "Success": { "Description": {
         "Who": "Creator",
-        "Type": "Change",
+        "Type": "Set",
         "What": "Trait.Master Of Dialectic.Level",
         "Value": 1
 	}
@@ -262,6 +262,9 @@
   
   "Host Symposium": {
     "On": 1,
+    "Targets": 1,
+    "AITargetChoice":"BestFriend",
+    "TargetSide":1,
     "Description": {
       "Regular": "$Creator.name is holding a symposim with $Target.name to discuss philosophy.",
       "Failure": "$Target.name clearly has the best views on the nature of beauty, truly they are wise.",
