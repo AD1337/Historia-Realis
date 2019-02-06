@@ -1,0 +1,127 @@
+{
+	"Setup Shrine":
+	{ 
+	    "On":1,
+	    "Descriptions":
+	    { 
+		"Regular":"The rituals to dedicate a shrine are begun, performing them correctly is hard.",
+		"Success":"A shrine is setup! The Gods be praised.",
+		"Failiure":"Something has gone wrong, that's just a pile of objects and not a shrine."
+	    },
+	    "Stats":
+	    { 
+		"Pietas": 1
+	    },
+	    "Effects":
+	    { 
+		"Success":
+		{ 
+		    "Shrine Setup":
+		    { 
+			"Who":"Creator",
+			"What":"Trait.Has Shrine At Home.Level",
+			"Type":"Set",
+			"Value":"1"
+		    }
+		}
+	    }
+	    "RequiresCreator":
+	    {
+		"Has Shrine":
+		{
+			"What": "Trait.Has Shrine At Home.Level",
+			"Comparison": "=",
+			"Value": "0"
+		}
+	    }
+	},
+	
+	"Pray to Jupiter":
+	{ 
+	    "On":1,
+	    "Descriptions":
+	    { 
+		"Regular":"",
+		"Success":"",
+		"Failiure":""
+	    },
+	    "Stats":
+	    { 
+		"Pietas": 1
+	    },
+	    "Effects":
+	    { 
+		"Success":
+		{ 
+		    "Blessing":
+		    { 
+			"Who":"Creator",
+			"What":"Trait.Blessings.Level",
+			"Type":"Set",
+			"Value":"5"
+		    }
+		}
+	    },
+	    "RequiresCreator":
+	    {
+		"Has Shrine":
+		{
+			"What": "Trait.Has Shrine At Home.Level",
+			"Comparison": ">",
+			"Value": "0"
+		},
+		"Not Blessed by Jupiter":
+		{
+			"What": "Trait.Blessings.Level",
+			"Comparison": "!=",
+			"Value": "5"
+		}
+	    }
+	},
+	
+	"Pray to Mars":
+	{ 
+	    "On":1,
+	    "Descriptions":
+	    { 
+		"Regular":"",
+		"Success":"",
+		"Failiure":""
+	    },
+	    "Stats":
+	    { 
+		"Pietas": 1
+	    },
+	    "Effects":
+	    { 
+		"Success":
+		{ 
+		    "Blessing":
+		    { 
+			"Who":"Creator",
+			"What":"Trait.Blessings.Level",
+			"Type":"Set",
+			"Value":"4"
+		    }
+		}
+	    },
+	    "RequiresCreator":
+	    {
+		"Has Shrine":
+		{
+			"What": "Trait.Has Shrine At Home.Level",
+			"Comparison": ">",
+			"Value": "0"
+		},
+		"Not Blessed by Mars":
+		{
+			"What": "Trait.Blessings.Level",
+			"Comparison": "!=",
+			"Value": "4"
+		}
+	    }
+	}
+	
+	
+
+}

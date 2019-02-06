@@ -55,21 +55,21 @@
 		{
 			"Success": 
 			{
-				"Has found a tutor.": 
+				"Has found a tutor": 
 				{
 					"Who": "Creator",
 					"Type": "Set",
 					"What": "Trait.Has Tutor.Level",
 					"Value": 1
 				},
-				"Has become a student.": 
+				"Has become a student": 
 				{
 					"Who": "Creator",
 					"Type": "Set",
 					"What": "Relationships.$Target.Status",
 					"Value": "Student"
 				},
-				"Has become a tutor.": 
+				"Has become a tutor": 
 				{
 					"Who": "Target",
 					"Type": "Set",
