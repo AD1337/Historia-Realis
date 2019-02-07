@@ -60,7 +60,7 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"This person has become a writer": 
 				{
 					"Who": "Creator",
 					"Type": "Set",
@@ -70,7 +70,7 @@
 			},
 			"Failure": 
 			{
-				"Description": 
+				"This person has learned a little": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
@@ -81,13 +81,21 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description2": 
+			"The student must have a tutor": 
 			{
 				"What": "Trait.Has Tutor.Level",
 				"Comparison": "=",
 				"Value": 1
+			},
+
+			"The student must not be a writer": 
+			{
+				"What": "Trait.Writer.Level",
+				"Comparison": "not",
+				"Value": 1
 			}
-		}
+		},
+
 	},
 	"Study Rhetoric": 
 	{
@@ -106,7 +114,7 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"This person becomes an Orator": 
 				{
 					"Who": "Creator",
 					"Type": "Set",
@@ -116,7 +124,7 @@
 			},
 			"Failure": 
 			{
-				"Description": 
+				"This person learned a little": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
@@ -127,10 +135,17 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description2": 
+			"Must have a tutor": 
 			{
 				"What": "Trait.Has Tutor.Level",
 				"Comparison": "=",
+				"Value": 1
+			},
+
+			"The student must not be an Orator": 
+			{
+				"What": "Trait.Orator.Level",
+				"Comparison": "not",
 				"Value": 1
 			}
 		}
@@ -152,7 +167,7 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"This person has mastered Dialectic": 
 				{
 					"Who": "Creator",
 					"Type": "Set",
@@ -162,7 +177,7 @@
 			},
 			"Failure": 
 			{
-				"Description": 
+				"This person learned a little": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
@@ -173,10 +188,17 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description2": 
+			"Must have a tutor": 
 			{
 				"What": "Trait.Has Tutor.Level",
 				"Comparison": "=",
+				"Value": 1
+			},
+
+			"The student must not be a writer": 
+			{
+				"What": "Trait.Master Of Dialectic.Level",
+				"Comparison": "not",
 				"Value": 1
 			}
 		}
@@ -184,6 +206,9 @@
 	"Persuade With Letter": 
 	{
 		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "BestFriend",
+		"TargetSide": 1,
 		"Description": 
 		{
 			"Regular": "$Creator.name is corresponding with $Target.name to persuade them of their friendship.",
@@ -198,14 +223,14 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"The relationship deepens": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
 					"What": "Relationships.$Target.Status",
 					"Value": 10
 				},
-				"Description2": 
+				"The relationship deepens": 
 				{
 					"Who": "Target",
 					"Type": "Change",
@@ -215,14 +240,14 @@
 			},
 			"Failure": 
 			{
-				"Description": 
+				"I shouldn't have upset him": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
 					"What": "Relationships.$Target.Status",
 					"Value": -5
 				},
-				"Description2": 
+				"Why do they always bother me": 
 				{
 					"Who": "Target",
 					"Type": "Change",
@@ -233,7 +258,7 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description2": 
+			"Must be a writer": 
 			{
 				"What": "Trait.Writer.Level",
 				"Comparison": "=",
@@ -246,7 +271,7 @@
 		"On": 1,
 		"Targets": 1,
 		"AITargetChoice": "BestFriend",
-		"TargetSide": 1,
+		"TargetSide": 0,
 		"Description": 
 		{
 			"Regular": "$Creator.name is holding a symposim with $Target.name to discuss philosophy.",
@@ -261,21 +286,21 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"Our freindship deepens": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
 					"What": "Relationships.$Target.Status",
 					"Value": 5
 				},
-				"Description1": 
+				"Our friendship deepens": 
 				{
 					"Who": "Target",
 					"Type": "Change",
 					"What": "Relationships.$Creator.Status",
 					"Value": 5
 				},
-				"Description2": 
+				"My arguments are the best": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
@@ -285,21 +310,21 @@
 			},
 			"Failure": 
 			{
-				"Description": 
+				"Of course my arguments were the best": 
 				{
 					"Who": "Target",
 					"Type": "Change",
 					"What": "Oratoria",
 					"Value": 2
 				},
-				"Description1": 
+				"He is clearly very clever, but is annoying about it": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
 					"What": "Relationships.$Target.Status",
 					"Value": 2
 				},
-				"Description2": 
+				"What a bore, at least the wine was free": 
 				{
 					"Who": "Target",
 					"Type": "Change",
@@ -310,7 +335,7 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description2": 
+			"Must be a Master Of Dialectic": 
 			{
 				"What": "Trait.Master Of Dialectic.Level",
 				"Comparison": "=",
@@ -323,6 +348,7 @@
 		"On": 1,
 		"Targets": 1,
 		"AITargetChoice": "WorstEnemy",
+		"TargetSide": 1,
 		"Description": 
 		{
 			"Regular": "$Creator.name speaks boldly to the men and women of Rome, who shall bear the villany of $Target.name any longer?",
@@ -337,7 +363,7 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"I am killed, fate is a cruel mistress": 
 				{
 					"Who": "Target",
 					"Type": "Set",
@@ -347,7 +373,7 @@
 			},
 			"Failure": 
 			{
-				"Description": 
+				"The mob turns on me, the beating is savage": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
@@ -358,13 +384,13 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description1": 
+			"Must be a Master Of Dialectic": 
 			{
 				"What": "Trait.Master Of Dialectic.Level",
 				"Comparison": "=",
 				"Value": 1
 			},
-			"Description2": 
+			"Must be an Orator": 
 			{
 				"What": "Trait.Orator.Level",
 				"Comparison": "=",
@@ -375,6 +401,9 @@
 	"Get Political Support": 
 	{
 		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "BestFriend",
+		"TargetSide": 1,
 		"Description": 
 		{
 			"Regular": "$Creator.name corresponds with $Target.name to convince them to become a client.",
@@ -389,14 +418,14 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"I subit to be their client": 
 				{
 					"Who": "Target",
 					"Type": "Set",
 					"What": "Relationships.$Creator.Status",
 					"Value": "Patron"
 				},
-				"Description2": 
+				"I have become the patron, I shall look after them": 
 				{
 					"Who": "Creator",
 					"Type": "Set",
@@ -407,13 +436,13 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description1": 
+			"Must be a Master Of Dialectic": 
 			{
 				"What": "Trait.Master Of Dialectic.Level",
 				"Comparison": "=",
 				"Value": 1
 			},
-			"Description2": 
+			"Must be a Writer": 
 			{
 				"What": "Trait.Writer.Level",
 				"Comparison": "=",
@@ -438,7 +467,7 @@
 		{
 			"Success": 
 			{
-				"Description": 
+				"I am famous throughout the city and the world": 
 				{
 					"Who": "Creator",
 					"Type": "Change",
@@ -449,19 +478,19 @@
 		},
 		"RequiresCreator": 
 		{
-			"Description1": 
+			"Must be a Master Of Dialectic": 
 			{
 				"What": "Trait.Master Of Dialectic.Level",
 				"Comparison": "=",
 				"Value": 1
 			},
-			"Description2": 
+			"Must be a Writer": 
 			{
 				"What": "Trait.Writer.Level",
 				"Comparison": "=",
 				"Value": 1
 			},
-			"Description3": 
+			"Must be an Orator": 
 			{
 				"What": "Trait.Orator.Level",
 				"Comparison": "=",
