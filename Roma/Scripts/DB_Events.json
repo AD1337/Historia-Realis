@@ -1,40 +1,4 @@
 {
-	"Practice": 
-	{
-		"On": 0,
-		"Description": 
-		{
-			"Regular": "$Creator.Name is practicing",
-			"Failure": "$Creator.Name failed.",
-			"Success": "$Creator.Name succeeded."
-		},
-		"Stats": 
-		{
-			"Martialis": 1
-		},
-		"Effects": 
-		{
-			"Success": 
-			{
-				"Gain trait In Training": 
-				{
-					"Who": "Creator",
-					"Type": "Change",
-					"What": "Trait.In Training.Level",
-					"Value": 1
-				}
-			}
-		},
-		"RequiresCreator": 
-		{
-			"Training Level is 0": 
-			{
-				"What": "Trait.In Training.Level",
-				"Comparison": "=",
-				"Value": 0
-			}
-		}
-	},
 	"Find Tutor": 
 	{
 		"On": 1,
@@ -501,6 +465,1264 @@
 			{
 				"What": "Trait.Orator.Level",
 				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	
+	"Hire Assassin": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.Name thinks it's time to find someone to do his dirty work.",
+			"Failure": "Nobody seems to want to be brought on as your assassin-in-tow.",
+			"Success": "$Creator.Name has hired an agent of death to do his bidding."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Has Assassin.Level",
+					"Value": 1
+				}
+			},
+			"Failure": 
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				}
+			},
+			"RequiresCreator": 
+			{
+				"Description": 
+				{
+					"When": "Creating",
+					"What": "Has Assassin",
+					"Comparison": "=",
+					"Value": 0
+				}
+			}
+		}
+	},
+	"Wander the Streets": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.Name is wandering the streets to learn of the people around him.",
+			"Failure": "Peoples' personalities elude you, no matter how cloesly you listen in.",
+			"Success": "You have a clear idea of how people react - and can act on it."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": 1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": "=",
+				"Value": 0
+			}
+		}
+	},
+	"Disrupt Training": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "$Creator.Name aims to curtail the training of $Target.Name.",
+			"Failure": "$Target.Name managed to complete their training without issue.",
+			"Success": "$Target.Name is unable to focus on their training; their skills are stagnant."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Gossip": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "$Creator.Name is spreading juicy rumors about $Target.Name.",
+			"Failure": "$Creator.Name makes an unconvincing case. $Target.Name is rumor-free.",
+			"Success": "$Creator.Name has successfully spread a rumor of $Target.Name."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -1
+				}
+			},
+			"Falure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 1
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Smear Reputation": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "$Creator.Name is poised to slander $Target.Name severely.",
+			"Failure": "It seems as though $Target.Name's reputation is stronger than an ox.",
+			"Success": "$Creator.Name has tarnished $Target.Name's reputation to an irreparable extent."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -3
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 3
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -3
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Trait.Tongue.Level",
+				"Comparison": ">",
+				"Value": 2
+			}
+		}
+	},
+	"Bribe": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -3
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 3
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -3
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Trait.Conspirator.Level",
+				"Comparison": ">",
+				"Value": 1
+			}
+		}
+	},
+	"Conspire": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "A conspiracy is in order for $Target.Name, courtesy of $Creator.Name.",
+			"Failure": "The plot against $Target.Name falls apart. $Creator.Name has failed.",
+			"Success": "It seems like everyone believes your lies about $Target.Name."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -2
+				}
+			},
+			"Falure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 2
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -3
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": ">",
+				"Value": 2
+			}
+		}
+	},
+	
+	"Martialis Practice": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "$Creator.Name is taking up the art of combat.",
+			"Failure": "The effort to learn and practice is proving to be harder than expected.",
+			"Success": "$Creator.Name knows more of combat now than before."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.In Training.Level",
+					"Value": 10
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": "=",
+				"Value": 0
+			}
+		}
+	},
+	"Riding Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "$Creator.Name mounts his steed and prepares to bring them on a brisk run.\n",
+			"Failure": "Why does the horse kick so much!?",
+			"Success": "$Creator.Name is now an adept at equine handling."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Melee Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You ready your sword and planty your feet firm, ready to strike the dummy.",
+			"Failure": "No matter the focus or aim, the blade misses its target.",
+			"Success": "$Creator.Name slashes through the dummy with ease."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{			
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Fighter.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Fighter.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Commanding Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You assemble your men and prepare to give a rousing talk.",
+			"Failure": "No words from $Creator.Name sway the men you command. They turn their heads away.",
+			"Success": "The men at your command pay quick attention to your word."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Commander.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Commander.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Go Hunting": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "The air is ripe for a good hunt. You ride into the woods.",
+			"Failure": "You didn't anticipate the hunt to bolt off as fast as it did. You've missed your target.",
+			"Success": "It is done. You've killed quite the specimen, and you will eat heartily tonight."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				},
+				"Description3": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Rider.Level",
+				"Comparison": ">",
+				"Value": 1
+			}
+		}
+	},
+	"Sparring": 
+	{
+		"On": 1,
+		"Targets":1,
+		"TargetSide":2,
+		"AITargetChoice":"RandomFriend",
+		"Descriptions": 
+		{
+			"Regular": "You and a friend agree to a friendly sparring match.",
+			"Failure": "The black eye and bruises were not expected. You've been bested.",
+			"Success": "Your punches land and hit hard. Your friend is quite impressed."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Relationship",
+					"Value": 5
+				},
+				"Description3": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Relationship",
+					"Value": 5
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Relationship",
+					"Value": -5
+				},
+				"Description4": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Relationship",
+					"Value": -5
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Fighter.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Strategize": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You pull out a map of a nearby field and analyze it for potential strategies.",
+			"Failure": "All of your models are off. Maybe the map is inaccurate?",
+			"Success": "The strategies you've developed might just impress Mars himself."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Commander.Level",
+				"Comparison": ">",
+				"Value": 1
+			}
+		}
+	},
+	
+	"Martialis Practice": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "$Creator.Name is taking up the art of combat.",
+			"Failure": "The effort to learn and practice is proving to be harder than expected.",
+			"Success": "$Creator.Name knows more of combat now than before."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.In Training.Level",
+					"Value": 10
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": "=",
+				"Value": 0
+			}
+		}
+	},
+	"Riding Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "$Creator.Name mounts his steed and prepares to bring them on a brisk run.\n",
+			"Failure": "Why does the horse kick so much!?",
+			"Success": "$Creator.Name is now an adept at equine handling."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Melee Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You ready your sword and planty your feet firm, ready to strike the dummy.",
+			"Failure": "No matter the focus or aim, the blade misses its target.",
+			"Success": "$Creator.Name slashes through the dummy with ease."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{			
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Fighter.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Fighter.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Commanding Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You assemble your men and prepare to give a rousing talk.",
+			"Failure": "No words from $Creator.Name sway the men you command. They turn their heads away.",
+			"Success": "The men at your command pay quick attention to your word."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Commander.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Commander.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Go Hunting": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "The air is ripe for a good hunt. You ride into the woods.",
+			"Failure": "You didn't anticipate the hunt to bolt off as fast as it did. You've missed your target.",
+			"Success": "It is done. You've killed quite the specimen, and you will eat heartily tonight."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				},
+				"Description3": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Rider.Level",
+				"Comparison": ">",
+				"Value": 1
+			}
+		}
+	},
+	"Sparring": 
+	{
+		"On": 1,
+		"Targets":1,
+		"TargetSide":2,
+		"AITargetChoice":"RandomFriend",
+		"Descriptions": 
+		{
+			"Regular": "You and a friend agree to a friendly sparring match.",
+			"Failure": "The black eye and bruises were not expected. You've been bested.",
+			"Success": "Your punches land and hit hard. Your friend is quite impressed."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Relationship",
+					"Value": 5
+				},
+				"Description3": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Relationship",
+					"Value": 5
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Relationship",
+					"Value": -5
+				},
+				"Description4": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Relationship",
+					"Value": -5
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Fighter.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Strategize": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You pull out a map of a nearby field and analyze it for potential strategies.",
+			"Failure": "All of your models are off. Maybe the map is inaccurate?",
+			"Success": "The strategies you've developed might just impress Mars himself."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Commander.Level",
+				"Comparison": ">",
 				"Value": 1
 			}
 		}

@@ -1,31 +1,4 @@
 {
-	"Poet": 
-	{
-		"2": 
-		{
-			"Name": "Great Poet",
-			"Oratoria": 3,
-			"Attractiveness": 2
-		},
-		"1": 
-		{
-			"Name": "Good Poet",
-			"Oratoria": 2,
-			"Attractiveness": 1
-		},
-		"-1": 
-		{
-			"Name": "Bad Poet",
-			"Oratoria": -2,
-			"Attractiveness": -1
-		},
-		"-2": 
-		{
-			"Name": "Terrible Poet",
-			"Oratoria": -3,
-			"Attractiveness": -2
-		}
-	},
 	"Rider": 
 	{
 		"2": 
@@ -151,10 +124,261 @@
 		"-2": 
 		{
 			"Name": "Incompetent Commander",
-			"Description": "You would be lucky if any turned to you when you spoke.",
+			"Description": "You would be lucky if any soldier turned to you when you spoke.",
 			"Martialis": -3,
 			"Dignitas": -2,
 			"Attractiveness": -2
+		}
+	},
+	"Conspirator": 
+	{
+		"3": 
+		{
+			"Name": "Shadowy Conspirator",
+			"Description": "No matter how hard some may try, your plots are as elusive as Mercury himself!",
+			"Astutia": 3,
+			"Dignitas": -1
+		},
+		"2": 
+		{
+			"Name": "Secretive Conspirator",
+			"Description": "Some prying eyes cannot see past your shadowy veil.",
+			"Astutia": 2,
+			"Dignitas": -2
+		},
+		"1": 
+		{
+			"Name": "Rookie Conspirator",
+			"Description": "You hold your own in a band of shadowy figures.",
+			"Astutia": 1,
+			"Dignitas": -3
+		},
+		"-1": 
+		{
+			"Name": "Basic Conspirator",
+			"Description": "You look out of place in a group of huddled together men.",
+			"Astutia": -1,
+			"Dignitas": -4
+		},
+		"-2": 
+		{
+			"Name": "Blatant Conspirator",
+			"Description": "Secrets are not safe with you, and you often blurt out well-kept plots.",
+			"Astutia": -2,
+			"Dignitas": -5
+		},
+		"-3": 
+		{
+			"Name": "Public Conspirator",
+			"Description": "Whether it is out of bravery or stupidity, you practically announce to the citizens your nefarious plans.",
+			"Astutia": -3,
+			"Dignitas": -6
+		}
+	},
+	"Distraction": 
+	{
+		"3": 
+		{
+			"Name": "Insufferable Distraction",
+			"Description": "\"By the gods, I'll sell you my estate if you stop your annoyances!\"",
+			"Astutia": 3,
+			"Dignitas": -3,
+			"Attractiveness": -3
+		},
+		"2": 
+		{
+			"Name": "Annoying Distraction",
+			"Description": "People wish you would go away, even when they know you won't walk away so easily.",
+			"Astutia": 2,
+			"Dignitas": -2,
+			"Attractiveness": -2
+		},
+		"1": 
+		{
+			"Name": "Distraction",
+			"Description": "If it's a distraction you want to be, you can definitely be a distraction.",
+			"Astutia": 1,
+			"Dignitas": -1,
+			"Attractiveness": -1
+		},
+		"-1": 
+		{
+			"Name": "Non-Distraction",
+			"Description": "You are unable to pull anyone away from their preoccupations.",
+			"Astutia": -1,
+			"Dignitas": 1,
+			"Attractiveness": 1
+		},
+		"-2": 
+		{
+			"Name": "Invisible Distraction",
+			"Description": "If a man was watching grass grow, it would be impossible for you to get his attention.",
+			"Astutia": -2,
+			"Dignitas": 2,
+			"Attractiveness": 2
+		}
+	},
+	"Tongue": 
+	{
+		"2": 
+		{
+			"Name": "Silver Tongue",
+			"Astutia": 2,
+			"Dignitas": 1
+		},
+		"1": 
+		{
+			"Astutia": 1,
+			"Dignitas": 0
+		},
+		"-1": 
+		{
+			"Astutia": -1,
+			"Dignitas": -1
+		},
+		"-2": 
+		{
+			"Name": "Lame Tongue",
+			"Astutia": -2,
+			"Dignitas": -2
+		}
+	},
+	"Has Assassin": 
+	{
+		"1": 
+		{
+			"Name": "Has Assassin",
+			"Description": "You have signed on a man of the deadly arts, ready to kill whoever you deem worthy of death.",
+			"Astutia": 2,
+			"Dignitas": -1
+		}
+	},
+	"In Training": 
+	{
+		"1": 
+		{
+			"Name": "In Training (1)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"2": 
+		{
+			"Name": "In Training (2)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"3": 
+		{
+			"Name": "In Training (3)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"4": 
+		{
+			"Name": "In Training (4)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"5": 
+		{
+			"Name": "In Training (5)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"6": 
+		{
+			"Name": "In Training (6)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"7": 
+		{
+			"Name": "In Training (7)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"8": 
+		{
+			"Name": "In Training (8)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"9": 
+		{
+			"Name": "In Training (9)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		},
+		"10": 
+		{
+			"Name": "In Training (10)",
+			"Description": "You are devoting yourself to learning the art of combat.",
+			"Martialis": 1,
+			"Dignitas": 1,
+			"Health": 1
+		}
+	},
+	"Shadowing": 
+	{
+		"1": 
+		{
+			"Name": "Shadowing (1)",
+			"Description": "You roam the streets, paying close attention to the mannerisms of those you pass.",
+			"Astutia": 1,
+			"Dignitas": 1
+		},
+		"-1": 
+		{
+			"Name": "Oblivious",
+			"Description": "You have trouble catching on to the wayward personalities of those around you.",
+			"Astutia": -1,
+			"Dignitas": -1
+		},
+		"2": 
+		{
+			"Name": "Shadowing (2)",
+			"Description": "You roam the streets, paying close attention to the mannerisms of those you pass.",
+			"Astutia": 1,
+			"Dignitas": 1
+		},
+		"3": 
+		{
+			"Name": "Shadowing (3)",
+			"Description": "You roam the streets, paying close attention to the mannerisms of those you pass.",
+			"Astutia": 1,
+			"Dignitas": 1
+		},
+		"4": 
+		{
+			"Name": "Shadowing (4)",
+			"Description": "You roam the streets, paying close attention to the mannerisms of those you pass.",
+			"Astutia": 1,
+			"Dignitas": 1
+		},
+		"5": 
+		{
+			"Name": "Shadowing (5)",
+			"Description": "You roam the streets, paying close attention to the mannerisms of those you pass.",
+			"Astutia": 1,
+			"Dignitas": 1
 		}
 	},
 	"Has Tutor": 
@@ -195,6 +419,69 @@
 			"Description": "Your logical reasoning is razor sharp, you cut through weak arguments with ease.",
 			"Oratoria": 4,
 			"Dignitas": 2
+		}
+	},
+	"Blessings": 
+	{
+		"5": 
+		{
+			"Name": "Child of Jupiter",
+			"Oratoria": 3
+		},
+		"4": 
+		{
+			"Name": "Chosen by Mars",
+			"Martialis": 3
+		},
+		"3": 
+		{
+			"Name": "Mercury's Blessing",
+			"Astutia": 3
+		},
+		"2": 
+		{
+			"Name": "Friend of Minerva",
+			"Administratio": 3
+		},
+		"1": 
+		{
+			"Name": "Neptune's Wisdom",
+			"Pietas": 3
+		}
+	},
+	"Religious Feeling": 
+	{
+		"4": 
+		{
+			"Name": "Intense Devotion",
+			"Pietas": 5
+		},
+		"3": 
+		{
+			"Name": "Pious",
+			"Pietas": 2
+		},
+		"2": 
+		{
+			"Name": "Spritual",
+			"Pietas": 1
+		},
+		"1": 
+		{
+			"Name": "Not Religious"
+		},
+		"-1": 
+		{
+			"Name": "Hates the Gods",
+			"Pietas": -2
+		}
+	},
+	"Has Shrine At Home": 
+	{
+		"1": 
+		{
+			"Name": "Has Shrine At Home",
+			"Pietas": 2
 		}
 	}
 }

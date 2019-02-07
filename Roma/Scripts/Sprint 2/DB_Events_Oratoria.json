@@ -1,0 +1,472 @@
+{
+	"Find Tutor": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "BestFriend",
+		"TargetSide": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.Name is trying to convince $Target.name to help them improve their Oratory.",
+			"Failure": "$Target.Name has better things to do than be a tutor.",
+			"Success": "$Target.name has agreed to be a tutor, let the long hours of boring lessons begin."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Has found a tutor": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Has Tutor.Level",
+					"Value": 1
+				},
+				"Has become a student": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Relationships.$Target.Status",
+					"Value": "Student"
+				},
+				"Has become a tutor": 
+				{
+					"Who": "Target",
+					"Type": "Set",
+					"What": "Relationships.$Creator.Status",
+					"Value": "Tutor"
+				}
+			}
+		}
+	},
+	"Study Grammar": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.Name is poring over a dense tome of grammatical lessons, the tutor helps but the task is hard.",
+			"Failure": "The book has once again proved impenetrable! But a litle learning did come from it.",
+			"Success": "$Creator.Name has understood and mastered grammar."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Writer.Level",
+					"Value": 1
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Oratoria",
+					"Value": 2
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description2": 
+			{
+				"What": "Trait.Has Tutor.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Study Rhetoric": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.Name is speaking in their most commanding voice, into the mirror.",
+			"Failure": "Mumbling quietly will not sway any audience, still it's better than last time.",
+			"Success": "$Creator.Name delivers their lines with force, proving they are a true Orator."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Orator.Level",
+					"Value": 1
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Oratoria",
+					"Value": 2
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description2": 
+			{
+				"What": "Trait.Has Tutor.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Study Logic": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "If all Romans are brave and Lucius is not a Roman then is Lucius not brave?",
+			"Failure": "What?? Confusion, endless confusion.",
+			"Success": "Through grasping thory arguments the flower of logic is percieved."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Master Of Dialectic.Level",
+					"Value": 1
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Oratoria",
+					"Value": 2
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description2": 
+			{
+				"What": "Trait.Has Tutor.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Persuade With Letter": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.name is corresponding with $Target.name to persuade them of their friendship.",
+			"Failure": "$Target.name sees through these childish tricks.",
+			"Success": "These two become even better friends, what sweeter support is there in life than a true friend?"
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Status",
+					"Value": 10
+				},
+				"Description2": 
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Status",
+					"Value": 10
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Status",
+					"Value": -5
+				},
+				"Description2": 
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Status",
+					"Value": -5
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description2": 
+			{
+				"What": "Trait.Writer.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Host Symposium": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "BestFriend",
+		"TargetSide": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.name is holding a symposim with $Target.name to discuss philosophy.",
+			"Failure": "$Target.name clearly has the best views on the nature of beauty, truly they are wise.",
+			"Success": "When $Creator.name speaks all are silenced by the power of his arguments, he knows what beauty truly is."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Status",
+					"Value": 5
+				},
+				"Description1": 
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Status",
+					"Value": 5
+				},
+				"Description2": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Oratoria",
+					"Value": 2
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Oratoria",
+					"Value": 2
+				},
+				"Description1": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Status",
+					"Value": 2
+				},
+				"Description2": 
+				{
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Status",
+					"Value": 2
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description2": 
+			{
+				"What": "Trait.Master Of Dialectic.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Rouse Mob": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "WorstEnemy",
+		"Description": 
+		{
+			"Regular": "$Creator.name speaks boldly to the men and women of Rome, who shall bear the villany of $Target.name any longer?",
+			"Failure": "$Target.name is loved by the crowd who turn on $Creator.name.",
+			"Success": "The mob rushes off with murder in their hearts, Rome will be aflame this day."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Target",
+					"Type": "Set",
+					"What": "Health",
+					"Value": -100
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Health",
+					"Value": -20
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description1": 
+			{
+				"What": "Trait.Master Of Dialectic.Level",
+				"Comparison": "=",
+				"Value": 1
+			},
+			"Description2": 
+			{
+				"What": "Trait.Orator.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Get Political Support": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.name corresponds with $Target.name to convince them to become a client.",
+			"Failure": "$Target.name doesn't want to become indebted to $Creator.name. ",
+			"Success": "$Target.name accepts $Creator.name as their patron, long may this relationship last."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Target",
+					"Type": "Set",
+					"What": "Relationships.$Creator.Status",
+					"Value": "Patron"
+				},
+				"Description2": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Relationships.$Target.Status",
+					"Value": "Client"
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description1": 
+			{
+				"What": "Trait.Master Of Dialectic.Level",
+				"Comparison": "=",
+				"Value": 1
+			},
+			"Description2": 
+			{
+				"What": "Trait.Writer.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Write Philosophical Treatise": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.name has studied deeply and is ready to follow in the footsteps of the great and write a philosophical treatise.",
+			"Failure": "The things in this book are common knowledge, only a fool would waste time reading it.",
+			"Success": "A masterpiece for the ages! $Creator.name will be mentioned with Aristotle and Pythagoras."
+		},
+		"Stats": 
+		{
+			"Oratoria": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 30
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description1": 
+			{
+				"What": "Trait.Master Of Dialectic.Level",
+				"Comparison": "=",
+				"Value": 1
+			},
+			"Description2": 
+			{
+				"What": "Trait.Writer.Level",
+				"Comparison": "=",
+				"Value": 1
+			},
+			"Description3": 
+			{
+				"What": "Trait.Orator.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	}
+}
