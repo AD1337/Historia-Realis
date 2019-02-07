@@ -1,0 +1,394 @@
+{
+	"Martialis Practice": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "$Creator.Name is taking up the art of combat.",
+			"Failure": "The effort to learn and practice is proving to be harder than expected.",
+			"Success": "$Creator.Name knows more of combat now than before."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.In Training.Level",
+					"Value": 10
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": "=",
+				"Value": 0
+			}
+		}
+	},
+	"Riding Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "$Creator.Name mounts his steed and prepares to bring them on a brisk run.\n",
+			"Failure": "Why does the horse kick so much!?",
+			"Success": "$Creator.Name is now an adept at equine handling."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Melee Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You ready your sword and planty your feet firm, ready to strike the dummy.",
+			"Failure": "No matter the focus or aim, the blade misses its target.",
+			"Success": "$Creator.Name slashes through the dummy with ease."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{			
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Fighter.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Fighter.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Commanding Training": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You assemble your men and prepare to give a rousing talk.",
+			"Failure": "No words from $Creator.Name sway the men you command. They turn their heads away.",
+			"Success": "The men at your command pay quick attention to your word."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Commander.Level",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Commander.Level",
+					"Value": -1
+				}
+			},
+			"Always":
+			{
+				"Description3": 
+				{
+					"When": "Always",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.In Training.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.In Training.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Go Hunting": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "The air is ripe for a good hunt. You ride into the woods.",
+			"Failure": "You didn't anticipate the hunt to bolt off as fast as it did. You've missed your target.",
+			"Success": "It is done. You've killed quite the specimen, and you will eat heartily tonight."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				},
+				"Description3": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Rider.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Rider.Level",
+				"Comparison": ">",
+				"Value": 1
+			}
+		}
+	},
+	"Sparring": 
+	{
+		"On": 1,
+		"Targets":1,
+		"TargetSide":2,
+		"AITargetChoice":"RandomFriend",
+		"Descriptions": 
+		{
+			"Regular": "You and a friend agree to a friendly sparring match.",
+			"Failure": "The black eye and bruises were not expected. You've been bested.",
+			"Success": "Your punches land and hit hard. Your friend is quite impressed."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Relationship",
+					"Value": 5
+				},
+				"Description3": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Relationship",
+					"Value": 5
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Relationships.$Target.Relationship",
+					"Value": -5
+				},
+				"Description4": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Relationships.$Creator.Relationship",
+					"Value": -5
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Fighter.Level",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Strategize": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "You pull out a map of a nearby field and analyze it for potential strategies.",
+			"Failure": "All of your models are off. Maybe the map is inaccurate?",
+			"Success": "The strategies you've developed might just impress Mars himself."
+		},
+		"Stats": 
+		{
+			"Martialis": 1
+		},
+		"Effects": 
+		{
+			"Success":
+			{
+				"Descriptions": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure":
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
+			{
+				"When": "Creating",
+				"What": "Trait.Commander.Level",
+				"Comparison": ">",
+				"Value": 1
+			}
+		}
+	}
+}
