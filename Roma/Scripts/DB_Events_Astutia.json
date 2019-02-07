@@ -1,0 +1,473 @@
+{
+	"Hire Assassin": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.Name thinks it's time to find someone to do his dirty work.",
+			"Failure": "Nobody seems to want to be brought on as your assassin-in-tow.",
+			"Success": "$Creator.Name has hired an agent of death to do his bidding."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Has Assassin.Level",
+					"Value": 1
+				}
+			},
+			"Failure": 
+			{
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				}
+			},
+			"RequiresCreator": 
+			{
+				"Description": 
+				{
+					"When": "Creating",
+					"What": "Has Assassin",
+					"Comparison": "=",
+					"Value": 0
+				}
+			}
+		}
+	},
+	"Wander the Streets": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "$Creator.Name is wandering the streets to learn of the people around him.",
+			"Failure": "Peoples' personalities elude you, no matter how cloesly you listen in.",
+			"Success": "You have a clear idea of how people react - and can act on it."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": 1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": "=",
+				"Value": 0
+			}
+		}
+	},
+	"Disrupt Training": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "$Creator.Name aims to curtail the training of $Target.Name.",
+			"Failure": "$Target.Name managed to complete their training without issue.",
+			"Success": "$Target.Name is unable to focus on their training; their skills are stagnant."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": 1
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Martialis",
+					"Value": -1
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Gossip": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "$Creator.Name is spreading juicy rumors about $Target.Name.",
+			"Failure": "$Creator.Name makes an unconvincing case. $Target.Name is rumor-free.",
+			"Success": "$Creator.Name has successfully spread a rumor of $Target.Name."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -1
+				}
+			},
+			"Falure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 1
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -1
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": ">",
+				"Value": 0
+			}
+		}
+	},
+	"Smear Reputation": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "$Creator.Name is poised to slander $Target.Name severely.",
+			"Failure": "It seems as though $Target.Name's reputation is stronger than an ox.",
+			"Success": "$Creator.Name has tarnished $Target.Name's reputation to an irreparable extent."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -3
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 3
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -3
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Trait.Tongue.Level",
+				"Comparison": ">",
+				"Value": 2
+			}
+		}
+	},
+	"Bribe": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -3
+				}
+			},
+			"Failure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 3
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -3
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Trait.Conspirator.Level",
+				"Comparison": ">",
+				"Value": 1
+			}
+		}
+	},
+	"Conspire": 
+	{
+		"On": 1,
+		"Targets": 1,
+		"AITargetChoice": "RandomEnemy",
+		"Description": 
+		{
+			"Regular": "A conspiracy is in order for $Target.Name, courtesy of $Creator.Name.",
+			"Failure": "The plot against $Target.Name falls apart. $Creator.Name has failed.",
+			"Success": "It seems like everyone believes your lies about $Target.Name."
+		},
+		"Stats": 
+		{
+			"Astutia": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Description": 
+				{
+					"When": "Success",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": 1
+				},
+				"Description2": 
+				{
+					"When": "Success",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": -2
+				}
+			},
+			"Falure": 
+			{
+				"Description": 
+				{
+					"When": "Failure",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Dignitas",
+					"Value": 2
+				},
+				"Description2": 
+				{
+					"When": "Failure",
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Astutia",
+					"Value": -1
+				}
+			},
+			"Always": 
+			{
+				"Description": 
+				{
+					"When": "Always",
+					"Who": "Target",
+					"Type": "Change",
+					"What": "Trait.Shadowing.Level",
+					"Value": -3
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Description": 
+			{
+				"When": "Creating",
+				"What": "Shadowing",
+				"Comparison": ">",
+				"Value": 2
+			}
+		}
+	}
+}
