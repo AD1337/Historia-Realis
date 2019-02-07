@@ -1726,5 +1726,326 @@
 				"Value": 1
 			}
 		}
+	},
+	"Setup Shrine": 
+	{
+		"On": 1,
+		"Descriptions": 
+		{
+			"Regular": "The rituals to dedicate a shrine are begun, performing them correctly is hard.",
+			"Success": "A shrine is setup! The Gods be praised.",
+			"Failure": "Something has gone wrong, that's just a pile of objects and not a shrine."
+		},
+		"Stats": 
+		{
+			"Pietas": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Shrine Setup": 
+				{
+					"Who": "Creator",
+					"What": "Trait.Has Shrine At Home.Level",
+					"Type": "Set",
+					"Value": "1"
+				}
+			}
+		},
+		"Comments": 
+		{
+			"Categories": 
+			[
+				"Piety"
+			],
+			"Designers": 
+			[
+				"Jon"
+			],
+			"Writers": 
+			[
+				""
+			],
+			"Sprints": 
+			[
+				"2"
+			]
+		}
+	},
+	"Pray To Jupiter": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "Oh father of the gods, hear me, help me and protect me",
+			"Success": "I feel the mighty one is listening! He is my father and I am his child",
+			"Failure": "Silence, who will help me now?"
+		},
+		"Stats": 
+		{
+			"Pietas": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Creator Gains Child Of Jupiter": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Blessings.Level",
+					"Value": 5
+				},
+				"Move Up Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": 1,
+					"Chance": "20"
+				}
+			},
+			"Failure": 
+			{
+				"Move Down Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": -1,
+					"Chance": "10"
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Has A Shrine": 
+			{
+				"What": "Trait.Has Shrine At Home.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Pray To Mars": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "Oh Mars lord of battle, stand beside when my enemies are near",
+			"Success": "Who can withstand the wrath of the gods? Are they not more mighty than the mountains?",
+			"Failure": "Silence, I suppose I shall fight for myself, as best I can"
+		},
+		"Stats": 
+		{
+			"Pietas": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Creator Gains Chosen By Mars": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Blessings.Level",
+					"Value": 4
+				},
+				"Move Up Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": 1,
+					"Chance": "20"
+				}
+			},
+			"Failure": 
+			{
+				"Move Down Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": -1,
+					"Chance": "10"
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Has A Shrine": 
+			{
+				"What": "Trait.Has Shrine At Home.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Pray To Mercury": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "Fleet footed messenger hear me! I call for your help",
+			"Success": "He whispers in my ear, my schemes are divine",
+			"Failure": "Silence, let us hope my wits alone will suffice"
+		},
+		"Stats": 
+		{
+			"Pietas": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Creator Gains Mercury's Blessing": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Blessings.Level",
+					"Value": 3
+				},
+				"Move Up Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": 1,
+					"Chance": "20"
+				}
+			},
+			"Failure": 
+			{
+				"Move Down Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": -1,
+					"Chance": "10"
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Has A Shrine": 
+			{
+				"What": "Trait.Has Shrine At Home.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Pray To Minerva": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "Kind Minerva, will you not visit me with your blessing?",
+			"Success": "I see clearly now, I am truly blessed",
+			"Failure": "Silence, I suppose I'd better learn to administer things by myself"
+		},
+		"Stats": 
+		{
+			"Pietas": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Creator Gains Minervas Diligence": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Blessings.Level",
+					"Value": 2
+				},
+				"Move Up Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": 1,
+					"Chance": "20"
+				}
+			},
+			"Failure": 
+			{
+				"Move Down Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": -1,
+					"Chance": "10"
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Has A Shrine": 
+			{
+				"What": "Trait.Has Shrine At Home.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
+	},
+	"Pray To Neptune": 
+	{
+		"On": 1,
+		"Description": 
+		{
+			"Regular": "Lord of the deep, grant me your wisdom so that I might become closer to nature and closer to the gods",
+			"Success": "A seagull has told me I am wise! What a great day",
+			"Failure": "Silence, all I hear is the crashing of the waves, oh Neptune, what do you require of me?"
+		},
+		"Stats": 
+		{
+			"Pietas": 1
+		},
+		"Effects": 
+		{
+			"Success": 
+			{
+				"Creator Gains Neptune's Wisdom": 
+				{
+					"Who": "Creator",
+					"Type": "Set",
+					"What": "Trait.Blessings.Level",
+					"Value": 1
+				},
+				"Move Up Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": 1,
+					"Chance": "20"
+				}
+			},
+			"Failure": 
+			{
+				"Move Down Religious Feeling": 
+				{
+					"Who": "Creator",
+					"Type": "Change",
+					"What": "Trait.Religious Feeling.Level",
+					"Value": -1,
+					"Chance": "10"
+				}
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Has A Shrine": 
+			{
+				"What": "Trait.Has Shrine At Home.Level",
+				"Comparison": "=",
+				"Value": 1
+			}
+		}
 	}
 }
