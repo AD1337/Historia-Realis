@@ -533,24 +533,24 @@
 					"What": "Astutia",
 					"Value": -1
 				}
-			},
-			"RequiresCreator": 
+			}
+		},
+		"RequiresCreator": 
+		{
+			"Descriptions": 
 			{
-				"Descriptions": 
-				{
-					"When": "Creating",
-					"What": "Trait.Has Assassin.Level",
-					"Comparison": "=",
-					"Value": 0
-				},
+				"When": "Creating",
+				"What": "Trait.Has Assassin.Level",
+				"Comparison": "=",
+				"Value": 0
+			},
 
-				"Descriptions2": 
-				{
-					"When": "Creating",
-					"What": "Trait.Conspirator.Level",
-					"Comparison": "=",
-					"Value": 3
-				}
+			"Descriptions2": 
+			{
+				"When": "Creating",
+				"What": "Trait.Conspirator.Level",
+				"Comparison": "=",
+				"Value": 3
 			}
 		}
 	},
